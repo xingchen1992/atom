@@ -1,6 +1,7 @@
 package com.max.helloworld.test;
 
 import org.junit.Test;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,6 +18,13 @@ public class HelloTest {
            helloApi2.sayHello();
            //3、执行业务逻辑  
            helloApi.sayHello();
+           
+           
+           
+         BeanFactory beanFactory =  new ClassPathXmlApplicationContext("helloworld.xml");  
+         //获取根据参数名字依赖注入的Bean  
+         HelloApi byName = beanFactory.getBean("byName", HelloApi.class);  
+         byName.sayHello(); 
 
     }  
 }

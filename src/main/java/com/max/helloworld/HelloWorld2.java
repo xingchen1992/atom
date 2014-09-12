@@ -8,8 +8,8 @@ public class HelloWorld2 implements HelloApi {
 		msg = "hello max";
 	}
 
-	public HelloWorld2(String s){
-		msg = s;
+	public HelloWorld2(String msg){
+		this.msg = msg;
 	}
 
 	
