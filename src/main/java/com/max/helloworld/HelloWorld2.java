@@ -12,8 +12,6 @@ public class HelloWorld2 implements HelloApi {
 		this.msg = msg;
 	}
 
-	
-	@Override
 	public void sayHello() {
 		System.out.println(msg);
 
